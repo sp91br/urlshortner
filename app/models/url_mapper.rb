@@ -1,0 +1,2 @@
+class UrlMapper < ApplicationRecord
+end

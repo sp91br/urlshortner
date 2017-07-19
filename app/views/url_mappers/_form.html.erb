@@ -1,0 +1,22 @@
+<%= form_with(model: url_mapper, local: true) do |form| %>
+  <% if url_mapper.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(url_mapper.errors.count, "error") %> prohibited this url_mapper from being saved:</h2>
+
+      <ul>
+      <% url_mapper.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :longurl %>
+    <%= form.text_area :longurl, id: :url_mapper_longurl, rows: 1, cols: 79 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Longurl:</strong>
+  <%= @url_mapper.longurl %>
+</p>
+<p>
+  <strong>Short url:</strong>
+  <%= link_to "#{@hostpath}/#{@url_mapper.id}", "#{@hostpath}/#{@url_mapper.id}" %>
+</p>
+
+<%= link_to 'Edit', edit_url_mapper_path(@url_mapper) %> |
+<%= link_to 'Back', url_mappers_path %>
